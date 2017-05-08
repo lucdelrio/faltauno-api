@@ -22,9 +22,9 @@
 	<mvc:annotation-driven />
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<context:component-scan base-package="ar.edu.unlam.tallerweb1.controladores" />
-	<context:component-scan base-package="ar.edu.unlam.tallerweb1.dao" />
-	<context:component-scan base-package="ar.edu.unlam.tallerweb1.servicios" />
+	<context:component-scan base-package="ar.api.faltauno.controladores" />
+	<context:component-scan base-package="ar.api.faltauno.dao" />
+	<context:component-scan base-package="ar.api.faltauno.servicios" />
 	
 
 </beans>

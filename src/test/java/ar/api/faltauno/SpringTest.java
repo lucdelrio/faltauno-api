@@ -1,4 +1,4 @@
-package ar.edu.unlam.tallerweb1;
+package ar.api.faltauno;
 
 import javax.inject.Inject;
 

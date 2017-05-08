@@ -1,12 +1,12 @@
-package ar.edu.unlam.tallerweb1.servicios;
+package ar.api.faltauno.servicios;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
-import ar.edu.unlam.tallerweb1.modelo.Usuario;
+import ar.api.faltauno.dao.UsuarioDao;
+import ar.api.faltauno.modelo.Usuario;
 
 
 @Service("servicioLogin")
@@ -20,5 +20,4 @@ public class ServicioLoginImpl implements ServicioLogin {
 	public Usuario consultarUsuario (Usuario usuario) {
 		return servicioLoginDao.consultarUsuario(usuario);
 	}
-
 }

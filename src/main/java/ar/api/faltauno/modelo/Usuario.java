@@ -1,4 +1,4 @@
-package ar.edu.unlam.tallerweb1.modelo;
+package ar.api.faltauno.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
