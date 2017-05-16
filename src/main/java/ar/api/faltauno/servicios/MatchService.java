@@ -2,22 +2,22 @@ package ar.api.faltauno.servicios;
 
 import java.util.List;
 
-import ar.api.faltauno.modelo.Match;
+import ar.api.faltauno.modelo.Partido;
 
 public interface MatchService {
 
-    Match findById(int matchId);
+    Partido findById(int matchId);
     
     //Match findByName(String name);
      
-    void saveMatch(Match match);
+    void saveMatch(Partido match);
      
-    void updateMatch(Match match);
+    void updateMatch(Partido match);
      
     void deleteMatchById(int matchId);
  
-    List<Match> findAllMatches();    
+    List<Partido> findAllMatches();    
    
-    public boolean isMatchExist(Match match);
+    public boolean isMatchExist(Partido match);
 
 }
