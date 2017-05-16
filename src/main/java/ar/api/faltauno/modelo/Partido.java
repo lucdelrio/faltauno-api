@@ -1,5 +1,7 @@
 package ar.api.faltauno.modelo;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,19 +16,26 @@ public class Partido {
 	@Column(name = "match_id")
 	private Long matchId;
 	
+	@Column(name = "owner_name")
     private String ownerName;
     
-    //integer
-    private String countOfPlayers;
+	@Column(name = "count_of_players")
+    private Integer countOfPlayers;
     
-    //date
-    private String time;
+	@Column(name = "time")
+    private Date time;
   
-    private String date;
+	@Column(name = "date")
+    private Date date;
   
+	@Column(name = "gender")
     private String gender;
-    private String address;
-    private String city;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "city")
+	private String city;
 	
     public void setMatchId(Long matchId){
         this.matchId = matchId;
@@ -44,27 +53,27 @@ public class Partido {
         return ownerName;
     }
 
-    public void setCountOfPlayers(String count){
+    public void setCountOfPlayers(Integer count){
         this.countOfPlayers = count;
     }
 
-    public String getCountOfPlayers() {
+    public Integer getCountOfPlayers() {
         return countOfPlayers;
     }
 
-    public void setTime(String time){
+    public void setTime(Date time){
         this.time = time;
     }
 
-    public String getTime(){
+    public Date getTime(){
         return time;
     }
 
-    public void setDate(String date){
+    public void setDate(Date date){
         this.date = date;
     }
 
-    public String getDate(){
+    public Date getDate(){
         return date;
     }
 

@@ -1,8 +1,6 @@
 package ar.api.faltauno.servicios;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.inject.Inject;
 
@@ -15,9 +13,7 @@ import ar.api.faltauno.modelo.Partido;
 @Service("matchService")
 @Transactional
 public class MatchServiceImpl implements MatchService{
-	
-    private static final AtomicInteger counter = new AtomicInteger();
-   
+	  
     @Inject
 	private MatchDao matchDao;
       
