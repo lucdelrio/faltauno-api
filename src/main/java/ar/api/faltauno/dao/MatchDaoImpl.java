@@ -16,7 +16,7 @@ public class MatchDaoImpl implements MatchDao {
 	
 	@Override
 	public Partido crearPartido(Partido match) {
-		final Session session = sessionFactory.getCurrentSession();
+		final Session session = sessionFactory.openSession();
 		
 		session.save(match);
 		

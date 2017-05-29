@@ -23,10 +23,10 @@ public class Partido {
     private Integer countOfPlayers;
     
 	@Column(name = "time")
-    private Date time;
+    private String time;
   
 	@Column(name = "date")
-    private Date date;
+    private String date;
   
 	@Column(name = "gender")
     private String gender;
@@ -61,19 +61,19 @@ public class Partido {
         return countOfPlayers;
     }
 
-    public void setTime(Date time){
+    public void setTime(String time){
         this.time = time;
     }
 
-    public Date getTime(){
+    public String getTime(){
         return time;
     }
 
-    public void setDate(Date date){
+    public void setDate(String date){
         this.date = date;
     }
 
-    public Date getDate(){
+    public String getDate(){
         return date;
     }
 
