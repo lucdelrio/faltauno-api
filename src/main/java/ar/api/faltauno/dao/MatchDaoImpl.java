@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import ar.api.faltauno.modelo.Partido;
 
@@ -16,7 +17,7 @@ public class MatchDaoImpl implements MatchDao {
 	
 	@Override
 	public Partido crearPartido(Partido match) {
-		final Session session = sessionFactory.openSession();
+		final Session session = sessionFactory.getCurrentSession();
 		
 		session.save(match);
 		
