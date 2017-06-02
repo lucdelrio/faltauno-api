@@ -38,7 +38,7 @@ public class MatchServiceImpl implements MatchService{
 
 	@Override
     public List<Partido> findAllMatches() {
-        return null;
+		return this.matchDao.obtenerPartidos();
     }
 
 	@Override

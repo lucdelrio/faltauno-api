@@ -1,5 +1,7 @@
 package ar.api.faltauno.dao;
 
+import java.util.List;
+
 import ar.api.faltauno.modelo.Partido;
 
 public interface MatchDao {
@@ -9,5 +11,7 @@ public interface MatchDao {
 	void delete(int matchId);
 
 	Partido findById(int matchId);
+
+	List<Partido> obtenerPartidos();
 
 }
