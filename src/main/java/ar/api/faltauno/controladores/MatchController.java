@@ -32,7 +32,7 @@ public class MatchController {
 	//RequestMapping forma parte de las anotaciones de springMVC que su funcionamiento se basa en recoger las peticiones
 	//que se hacen a la url relativa, en este caso la raíz, e indica a Spring que esta es la clase que maneja la vista.
     @RequestMapping(value = "/matches", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<Void> postMatch(@RequestBody Partido match, UriComponentsBuilder ucBuilder) {
+    public ResponseEntity<Void> postMatches(@RequestBody Partido match, UriComponentsBuilder ucBuilder) {
  
         if (matchService.isMatchExist(match)) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
@@ -46,7 +46,7 @@ public class MatchController {
     }
     
     @RequestMapping(value = "/matches", method = RequestMethod.GET)
-    public List<Partido> getMatch() {
+    public List<Partido> getMatches() {
         return matchService.findAllMatches();
  
     }
