@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ar.api.faltauno.modelo.Partido;
 
+//Repository indica a Spring que es un beans y que forma parte del modelo. 
+//Es equivalente a @Component, pero viene bien especificar a que parte pertenece.
 @Repository("matchDao")
 public class MatchDaoImpl implements MatchDao {
 
@@ -41,8 +43,9 @@ public class MatchDaoImpl implements MatchDao {
 	@Override
 	public List<Partido> obtenerPartidos() {
 		final Session session = sessionFactory.getCurrentSession();
-		 
-		Query query = session.createQuery("FROM Partidos");
+		//List<Partido> listaDePartidos = session.createQuery("FROM faltauno.partido").list();
+		//return listaDePartidos;
+		Query query = session.createQuery("FROM Partido");
 		   
 		return  query.list();
 	}

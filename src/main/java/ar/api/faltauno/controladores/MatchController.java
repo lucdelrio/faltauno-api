@@ -25,10 +25,13 @@ import ar.api.faltauno.servicios.MatchService;
 @RestController
 public class MatchController {
 	
+	//Autowired indica a Spring que sessionFactory tiene que inyectarlo
 	@Autowired
     private MatchService matchService;
 	
-    @RequestMapping(value = "/match", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
+	//RequestMapping forma parte de las anotaciones de springMVC que su funcionamiento se basa en recoger las peticiones
+	//que se hacen a la url relativa, en este caso la raíz, e indica a Spring que esta es la clase que maneja la vista.
+    @RequestMapping(value = "/matches", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Void> postMatch(@RequestBody Partido match, UriComponentsBuilder ucBuilder) {
  
         if (matchService.isMatchExist(match)) {
@@ -42,8 +45,8 @@ public class MatchController {
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
     
-    @RequestMapping(value = "/match", method = RequestMethod.GET)
-    public List<Partido> getMatch(Partido match, @RequestParam("id") Long id) {
+    @RequestMapping(value = "/matches", method = RequestMethod.GET)
+    public List<Partido> getMatch() {
         return matchService.findAllMatches();
  
     }

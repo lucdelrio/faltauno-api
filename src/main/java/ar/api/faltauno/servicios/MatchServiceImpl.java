@@ -10,7 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ar.api.faltauno.dao.MatchDao;
 import ar.api.faltauno.modelo.Partido;
 
+//Service indica a Spring que es un beans y que forma parte del modelo. 
+//Es equivalente a @Component, pero viene bien especificar a que parte pertenece.
 @Service("matchService")
+//Transaccional indica que la transacción o se completa entera o se hace rollback
 @Transactional
 public class MatchServiceImpl implements MatchService{
 	  
