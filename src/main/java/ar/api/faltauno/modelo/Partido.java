@@ -36,6 +36,15 @@ public class Partido {
 	@Column(name = "city")
 	private String city;
 	
+	@Column(name = "cupo")
+	private String cupo;
+	
+	@Column(name = "nivel")
+	private String nivel;
+	
+	@Column(name = "categoria")
+	private String categoria;
+	
     public void setMatchId(Long matchId){
         this.matchId = matchId;
     }
@@ -99,4 +108,29 @@ public class Partido {
     public String getCity() {
         return city;
     }
+    
+    public void setCupo(String cupo){
+        this.cupo = cupo;
+    }
+
+    public String getCupo() {
+        return cupo;
+    }
+    
+    public void setNivel(String nivel){
+        this.nivel = nivel;
+    }
+
+    public String getNivel() {
+        return nivel;
+    }
+    
+    public void setCategoria(String categoria){
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria	;
+    }
+
 }
