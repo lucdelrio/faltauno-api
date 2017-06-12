@@ -112,27 +112,27 @@ public class Partido {
         return city;
     }
     
-    public void setCupo(String cupo){
-        this.quota = cupo;
+    public void setQuota(String quota){
+        this.quota = quota;
     }
 
-    public String getCupo() {
+    public String getQuota() {
         return quota;
     }
     
-    public void setNivel(String nivel){
-        this.level = nivel;
+    public void setNivel(String level){
+        this.level = level;
     }
 
-    public String getNivel() {
+    public String getLevel() {
         return level;
     }
     
-    public void setCategoria(String categoria){
-        this.category = categoria;
+    public void setCategory(String category){
+        this.category = category;
     }
 
-    public String getCategoria() {
+    public String getCategory() {
         return category;
     }
     
