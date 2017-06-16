@@ -47,7 +47,9 @@ public class ControladorPartido {
     
     @RequestMapping(value = "/matches", method = RequestMethod.GET)
     public List<Partido> getMatches() {
-        return matchService.findAllMatches();
+        List<Partido> matches = matchService.findAllMatches();
+        System.out.println(matches.size());
+        return matches;
  
     }
 
