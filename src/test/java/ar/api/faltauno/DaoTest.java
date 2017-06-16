@@ -16,8 +16,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.api.faltauno.dao.MatchDao;
-import ar.api.faltauno.dao.MatchDaoImpl;
+import ar.api.faltauno.dao.PartidoDao;
+import ar.api.faltauno.dao.PartidoDaoImpl;
 import ar.api.faltauno.modelo.Partido;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,12 +26,12 @@ import ar.api.faltauno.modelo.Partido;
 public class DaoTest {
 
 	@Inject
-	private MatchDao matchDao;
+	private PartidoDao matchDao;
 
 	
 	@Test
 	public void obtenerListaDePartidosDeberiaDevolverTresPartidos(){
-		List<Partido> listaDePartidos = this.matchDao.obtenerPartidos();
+		List<Partido> listaDePartidos = this.matchDao.getPartidos();
 		int valorEsperado = 1;
 		
 		Assert.assertEquals(valorEsperado, listaDePartidos.size());
@@ -40,13 +40,13 @@ public class DaoTest {
 	@Before
 	public void crearPartido(){
 		Partido partido1 = new Partido();
-		partido1.setAddress("Caseros");
-		partido1.setCity("San Martin");
-		partido1.setCountOfPlayers(5);
-		partido1.setDate("14/11/17");
-		partido1.setGender("Masculino");
-		partido1.setOwnerName("Roberto");
-		partido1.setTime("14:22");
+		partido1.setDireccion("Caseros");
+		partido1.setCiudad("San Martin");
+		partido1.setTamanioDeCancha(5);
+		partido1.setFecha("14/11/17");
+		partido1.setGenero("Masculino");
+		partido1.setNombreOrganizador("Roberto");
+		partido1.setHora("14:22");
 		
 		this.matchDao.crearPartido(partido1);
 	}

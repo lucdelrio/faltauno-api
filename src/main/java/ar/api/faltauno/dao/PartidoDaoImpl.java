@@ -15,7 +15,7 @@ import ar.api.faltauno.modelo.Partido;
 //Repository indica a Spring que es un beans y que forma parte del modelo. 
 //Es equivalente a @Component, pero viene bien especificar a que parte pertenece.
 @Repository("matchDao")
-public class MatchDaoImpl implements MatchDao {
+public class PartidoDaoImpl implements PartidoDao {
 
 	@Inject
     private SessionFactory sessionFactory;
@@ -41,7 +41,7 @@ public class MatchDaoImpl implements MatchDao {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Partido> obtenerPartidos() {
+	public List<Partido> getPartidos() {
 		final Session session = sessionFactory.getCurrentSession();
 		//List<Partido> listaDePartidos = session.createQuery("FROM faltauno.partido").list();
 		//return listaDePartidos;

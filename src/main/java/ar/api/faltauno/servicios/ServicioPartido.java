@@ -4,7 +4,7 @@ import java.util.List;
 
 import ar.api.faltauno.modelo.Partido;
 
-public interface MatchService {
+public interface ServicioPartido {
 
     Partido findById(int matchId);
     
@@ -16,7 +16,7 @@ public interface MatchService {
      
     void deleteMatchById(int matchId);
  
-    List<Partido> findAllMatches();    
+    List<Partido> getPartidos();    
    
     public boolean isMatchExist(Partido match);
 

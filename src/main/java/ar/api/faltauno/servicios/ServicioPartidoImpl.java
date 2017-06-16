@@ -7,27 +7,27 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.api.faltauno.dao.MatchDao;
+import ar.api.faltauno.dao.PartidoDao;
 import ar.api.faltauno.modelo.Partido;
 
 //Service indica a Spring que es un beans y que forma parte del modelo. 
 //Es equivalente a @Component, pero viene bien especificar a que parte pertenece.
 @Service("matchService")
-//Transaccional indica que la transacción o se completa entera o se hace rollback
+//Transaccional indica que la transacciï¿½n o se completa entera o se hace rollback
 @Transactional
-public class MatchServiceImpl implements MatchService{
+public class ServicioPartidoImpl implements ServicioPartido{
 	  
     @Inject
-	private MatchDao matchDao;
+	private PartidoDao partidoDao;
       
 	@Override
 	public Partido findById(int matchId) {		
-		return matchDao.findById(matchId);
+		return partidoDao.findById(matchId);
 	}
 
 	@Override
 	public void saveMatch(Partido match) {
-		this.matchDao.crearPartido(match);
+		this.partidoDao.crearPartido(match);
 	}
 
 	@Override
@@ -36,12 +36,12 @@ public class MatchServiceImpl implements MatchService{
 
 	@Override
 	public void deleteMatchById(int matchId) {
-       this.matchDao.delete(matchId);	
+       this.partidoDao.delete(matchId);	
 	}
 
 	@Override
-    public List<Partido> findAllMatches() {
-		return this.matchDao.obtenerPartidos();
+    public List<Partido> getPartidos() {
+		return this.partidoDao.getPartidos();
     }
 
 	@Override

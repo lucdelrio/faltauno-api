@@ -4,7 +4,7 @@ import java.util.List;
 
 import ar.api.faltauno.modelo.Partido;
 
-public interface MatchDao {
+public interface PartidoDao {
 
 	Partido crearPartido(Partido match);
 
@@ -12,6 +12,6 @@ public interface MatchDao {
 
 	Partido findById(int matchId);
 
-	List<Partido> obtenerPartidos();
+	List<Partido> getPartidos();
 
 }

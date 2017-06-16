@@ -12,128 +12,128 @@ public class Partido {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "match_id")
-	private Long matchId;
+	@Column(name = "id_partido")
+	private Long id_partido;
 	
-	@Column(name = "owner_name")
-    private String ownerName;
+	@Column(name = "nombre_organizador")
+    private String nombreOrganizador;
     
-	@Column(name = "count_of_players")
-    private Integer countOfPlayers;
+	@Column(name = "tamanio_de_cancha")
+    private Integer tamanioDeCancha;
     
-	@Column(name = "time")
-    private String time;
+	@Column(name = "hora")
+    private String hora;
   
-	@Column(name = "date")
-    private String date;
+	@Column(name = "fecha")
+    private String fecha;
   
-	@Column(name = "gender")
-    private String gender;
+	@Column(name = "genero")
+    private String genero;
 
-	@Column(name = "address")
-	private String address;
+	@Column(name = "direccion")
+	private String direccion;
 
-	@Column(name = "city")
-	private String city;
+	@Column(name = "ciudad")
+	private String ciudad;
 	
-	@Column(name = "quota")
-	private String quota;
+	@Column(name = "cupo")
+	private String cupo;
 	
-	@Column(name = "level")
-	private String level;
+	@Column(name = "nivel")
+	private String nivel;
 	
-	@Column(name = "category")
-	private String category;
+	@Column(name = "categoria")
+	private String categoria;
 
 	@Column(name = "email")
 	private String email;
 	
-    public void setMatchId(Long matchId){
-        this.matchId = matchId;
+    public void setIdPartido(Long id_partido){
+        this.id_partido = id_partido;
     }
 
-    public Long getMatchId(){
-        return this.matchId;
+    public Long getIdPartido(){
+        return this.id_partido;
     }
 
-    public void setOwnerName(String owner){
-        this.ownerName = owner;
+    public void setNombreOrganizador(String nombreOrganizador){
+        this.nombreOrganizador = nombreOrganizador;
     }
 
-    public String getOwnerName(){
-        return ownerName;
+    public String getNombreOrganizador(){
+        return nombreOrganizador;
     }
 
-    public void setCountOfPlayers(Integer count){
-        this.countOfPlayers = count;
+    public void setTamanioDeCancha(Integer tamanioDeCancha){
+        this.tamanioDeCancha = tamanioDeCancha;
     }
 
-    public Integer getCountOfPlayers() {
-        return countOfPlayers;
+    public Integer getTamanioDeCancha() {
+        return tamanioDeCancha;
     }
 
-    public void setTime(String time){
-        this.time = time;
+    public void setHora(String hora){
+        this.hora = hora;
     }
 
-    public String getTime(){
-        return time;
+    public String getHora(){
+        return hora;
     }
 
-    public void setDate(String date){
-        this.date = date;
+    public void setFecha(String fecha){
+        this.fecha = fecha;
     }
 
-    public String getDate(){
-        return date;
+    public String getFecha(){
+        return fecha;
     }
 
-    public void setGender(String gender){
-        this.gender = gender;
+    public void setGenero(String genero){
+        this.genero = genero;
     }
 
-    public String getGender(){
-        return gender;
+    public String getGenero(){
+        return genero;
     }
 
-    public void setAddress(String address){
-        this.address = address;
+    public void setDireccion(String direccion){
+        this.direccion = direccion;
     }
 
-    public String getAddress(){
-        return address;
+    public String getDireccion(){
+        return direccion;
     }
 
-    public void setCity(String city){
-        this.city = city;
+    public void setCiudad(String ciudad){
+        this.ciudad = ciudad;
     }
 
-    public String getCity() {
-        return city;
+    public String getCiudad() {
+        return ciudad;
     }
     
-    public void setQuota(String quota){
-        this.quota = quota;
+    public void setCupo(String cupo){
+        this.cupo = cupo;
     }
 
-    public String getQuota() {
-        return quota;
+    public String getCupo() {
+        return cupo;
     }
     
-    public void setNivel(String level){
-        this.level = level;
+    public void setNivel(String nivel){
+        this.nivel = nivel;
     }
 
-    public String getLevel() {
-        return level;
+    public String getNivel() {
+        return nivel;
     }
     
-    public void setCategory(String category){
-        this.category = category;
+    public void setCategoria(String categoria){
+        this.categoria = categoria;
     }
 
-    public String getCategory() {
-        return category;
+    public String getCategoria() {
+        return categoria;
     }
     
     public void setEmail(String email){
