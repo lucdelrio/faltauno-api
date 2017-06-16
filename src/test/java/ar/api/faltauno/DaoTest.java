@@ -31,7 +31,7 @@ public class DaoTest {
 	
 	@Test
 	public void obtenerListaDePartidosDeberiaDevolverTresPartidos(){
-		List<Partido> listaDePartidos = this.matchDao.obtenerPartidos();
+		List<Partido> listaDePartidos = this.matchDao.getPartidos();
 		int valorEsperado = 1;
 		
 		Assert.assertEquals(valorEsperado, listaDePartidos.size());

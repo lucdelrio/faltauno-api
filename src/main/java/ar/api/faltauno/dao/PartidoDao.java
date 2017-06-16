@@ -12,6 +12,6 @@ public interface PartidoDao {
 
 	Partido findById(int matchId);
 
-	List<Partido> obtenerPartidos();
+	List<Partido> getPartidos();
 
 }

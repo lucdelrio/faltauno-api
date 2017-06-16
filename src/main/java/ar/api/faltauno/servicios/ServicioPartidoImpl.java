@@ -41,7 +41,7 @@ public class ServicioPartidoImpl implements ServicioPartido{
 
 	@Override
     public List<Partido> findAllMatches() {
-		return this.matchDao.obtenerPartidos();
+		return this.matchDao.getPartidos();
     }
 
 	@Override

@@ -15,7 +15,7 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 				<prop key="hibernate.show_sql">false</prop>
 				<prop key="hibernate.format_sql">false</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>		
+				<prop key="hibernate.hbm2ddl.auto">update</prop>		
 				<!--  update para que no se cree tabla cada vez que se levante el server   -->
 				<!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->	
 			</props>
