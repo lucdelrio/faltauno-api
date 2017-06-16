@@ -20,17 +20,17 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import ar.api.faltauno.modelo.Partido;
 import ar.api.faltauno.modelo.Usuario;
-import ar.api.faltauno.servicios.MatchService;
+import ar.api.faltauno.servicios.ServicioPartido;
 
 @RestController
-public class MatchController {
+public class ControladorPartido {
 	
 	//Autowired indica a Spring que sessionFactory tiene que inyectarlo
 	@Autowired
-    private MatchService matchService;
+    private ServicioPartido matchService;
 	
 	//RequestMapping forma parte de las anotaciones de springMVC que su funcionamiento se basa en recoger las peticiones
-	//que se hacen a la url relativa, en este caso la raíz, e indica a Spring que esta es la clase que maneja la vista.
+	//que se hacen a la url relativa, en este caso la raï¿½z, e indica a Spring que esta es la clase que maneja la vista.
     @RequestMapping(value = "/matches", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Void> postMatches(@RequestBody Partido match, UriComponentsBuilder ucBuilder) {
  
@@ -41,7 +41,7 @@ public class MatchController {
 		matchService.saveMatch(match);
  
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/match/{id}").buildAndExpand(match.getMatchId()).toUri());
+        headers.setLocation(ucBuilder.path("/match/{id}").buildAndExpand(match.getIdPartido()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
     
