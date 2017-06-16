@@ -14,7 +14,7 @@ import ar.api.faltauno.modelo.Partido;
 
 //Repository indica a Spring que es un beans y que forma parte del modelo. 
 //Es equivalente a @Component, pero viene bien especificar a que parte pertenece.
-@Repository("matchDao")
+@Repository("partidoDao")
 public class PartidoDaoImpl implements PartidoDao {
 
 	@Inject
@@ -43,9 +43,8 @@ public class PartidoDaoImpl implements PartidoDao {
 	@Override
 	public List<Partido> getPartidos() {
 		final Session session = sessionFactory.getCurrentSession();
-		//List<Partido> listaDePartidos = session.createQuery("FROM faltauno.partido").list();
-		//return listaDePartidos;
-		Query query = session.createQuery("FROM Partido");
+
+		Query query = session.createQuery("FROM Partido ORDER BY cupo desc");
 		   
 		return  query.list();
 	}
