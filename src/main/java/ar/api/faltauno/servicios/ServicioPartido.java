@@ -16,7 +16,7 @@ public interface ServicioPartido {
      
     void deleteMatchById(int matchId);
  
-    List<Partido> findAllMatches();    
+    List<Partido> getPartidos();    
    
     public boolean isMatchExist(Partido match);
 

@@ -18,16 +18,16 @@ import ar.api.faltauno.modelo.Partido;
 public class ServicioPartidoImpl implements ServicioPartido{
 	  
     @Inject
-	private PartidoDao matchDao;
+	private PartidoDao partidoDao;
       
 	@Override
 	public Partido findById(int matchId) {		
-		return matchDao.findById(matchId);
+		return partidoDao.findById(matchId);
 	}
 
 	@Override
 	public void saveMatch(Partido match) {
-		this.matchDao.crearPartido(match);
+		this.partidoDao.crearPartido(match);
 	}
 
 	@Override
@@ -36,12 +36,12 @@ public class ServicioPartidoImpl implements ServicioPartido{
 
 	@Override
 	public void deleteMatchById(int matchId) {
-       this.matchDao.delete(matchId);	
+       this.partidoDao.delete(matchId);	
 	}
 
 	@Override
-    public List<Partido> findAllMatches() {
-		return this.matchDao.obtenerPartidos();
+    public List<Partido> getPartidos() {
+		return this.partidoDao.getPartidos();
     }
 
 	@Override

@@ -41,7 +41,7 @@ public class PartidoDaoImpl implements PartidoDao {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Partido> obtenerPartidos() {
+	public List<Partido> getPartidos() {
 		final Session session = sessionFactory.getCurrentSession();
 		//List<Partido> listaDePartidos = session.createQuery("FROM faltauno.partido").list();
 		//return listaDePartidos;
