@@ -37,7 +37,7 @@ public class Partido {
 	private String ciudad;
 	
 	@Column(name = "cupo")
-	private String cupo;
+	private Integer cupo;
 	
 	@Column(name = "nivel")
 	private String nivel;
@@ -112,11 +112,11 @@ public class Partido {
         return ciudad;
     }
     
-    public void setCupo(String cupo){
+    public void setCupo(Integer cupo){
         this.cupo = cupo;
     }
 
-    public String getCupo() {
+    public Integer getCupo() {
         return cupo;
     }
     

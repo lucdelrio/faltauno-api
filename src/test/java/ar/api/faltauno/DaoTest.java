@@ -47,6 +47,7 @@ public class DaoTest {
 		partido1.setGenero("Masculino");
 		partido1.setNombreOrganizador("Roberto");
 		partido1.setHora("14:22");
+		partido1.setCupo(8);
 		
 		this.matchDao.crearPartido(partido1);
 	}

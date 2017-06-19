@@ -44,7 +44,7 @@ public class PartidoDaoImpl implements PartidoDao {
 	public List<Partido> getPartidos() {
 		final Session session = sessionFactory.getCurrentSession();
 
-		Query query = session.createQuery("FROM Partido ORDER BY cupo desc");
+		Query query = session.createQuery("FROM Partido p ORDER BY p.cupo ASC");
 		   
 		return  query.list();
 	}
