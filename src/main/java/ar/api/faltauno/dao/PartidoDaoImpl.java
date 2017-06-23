@@ -21,12 +21,12 @@ public class PartidoDaoImpl implements PartidoDao {
     private SessionFactory sessionFactory;
 	
 	@Override
-	public Partido crearPartido(Partido match) {
+	public Partido crearPartido(Partido partido) {
 		final Session session = sessionFactory.getCurrentSession();
 		
-		session.save(match);
+		session.save(partido);
 		
-		return match;
+		return partido;
 	}
 
 	@Override
@@ -47,6 +47,18 @@ public class PartidoDaoImpl implements PartidoDao {
 		Query query = session.createQuery("FROM Partido p ORDER BY p.cupo ASC");
 		   
 		return  query.list();
+	}
+
+	@Override
+	public Partido updatePartido(Partido partido) {
+		final Session session = sessionFactory.getCurrentSession();
+		
+		Partido partidoAModificar = (Partido)this.sessionFactory.getCurrentSession().get(Partido.class, partido.getIdPartido());
+
+		partidoAModificar.setCupo(partido.getCupo());
+		session.update(partidoAModificar);
+		return partido;
+		
 	}
 
 }

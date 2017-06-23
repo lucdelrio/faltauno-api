@@ -6,18 +6,18 @@ import ar.api.faltauno.modelo.Partido;
 
 public interface ServicioPartido {
 
-    Partido findById(int matchId);
+    Partido findById(int partidoId);
     
     //Match findByName(String name);
      
-    void saveMatch(Partido match);
-     
-    void updateMatch(Partido match);
-     
-    void deleteMatchById(int matchId);
+    void saveMatch(Partido partido);
+        
+    void deleteMatchById(int partidoId);
  
     List<Partido> getPartidos();    
    
-    public boolean isMatchExist(Partido match);
+    public boolean isMatchExist(Partido partido);
+
+	void updatePartido(Partido partido);
 
 }

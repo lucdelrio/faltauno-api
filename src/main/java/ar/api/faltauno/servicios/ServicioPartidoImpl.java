@@ -21,22 +21,24 @@ public class ServicioPartidoImpl implements ServicioPartido{
 	private PartidoDao partidoDao;
       
 	@Override
-	public Partido findById(int matchId) {		
-		return partidoDao.findById(matchId);
+	public Partido findById(int partidoId) {		
+		return partidoDao.findById(partidoId);
 	}
 
 	@Override
-	public void saveMatch(Partido match) {
-		this.partidoDao.crearPartido(match);
+	public void saveMatch(Partido partido) {
+		this.partidoDao.crearPartido(partido);
 	}
 
 	@Override
-	public void updateMatch(Partido match) {
+	public void updatePartido(Partido partido) {
+		this.partidoDao.updatePartido(partido);
+
 	}
 
 	@Override
-	public void deleteMatchById(int matchId) {
-       this.partidoDao.delete(matchId);	
+	public void deleteMatchById(int partidoId) {
+       this.partidoDao.delete(partidoId);	
 	}
 
 	@Override
@@ -45,7 +47,7 @@ public class ServicioPartidoImpl implements ServicioPartido{
     }
 
 	@Override
-	public boolean isMatchExist(Partido match) {
+	public boolean isMatchExist(Partido partido) {
         return false;
 	}
  

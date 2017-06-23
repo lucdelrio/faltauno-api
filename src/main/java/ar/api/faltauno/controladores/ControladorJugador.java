@@ -28,7 +28,7 @@ public class ControladorJugador {
 	//RequestMapping forma parte de las anotaciones de springMVC que su funcionamiento se basa en recoger las peticiones
 	//que se hacen a la url relativa, en este caso la ra�z, e indica a Spring que esta es la clase que maneja la vista.
     @RequestMapping(value = "/players", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<Void> postMatches(@RequestBody Jugador jugador, UriComponentsBuilder ucBuilder) {
+    public ResponseEntity<Void> postJugadores(@RequestBody Jugador jugador, UriComponentsBuilder ucBuilder) {
  
         if (servicioJugador.jugadorExiste(jugador)) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
@@ -47,4 +47,5 @@ public class ControladorJugador {
         return partidos;
  
     }
+
 }

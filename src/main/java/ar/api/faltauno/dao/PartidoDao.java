@@ -6,12 +6,15 @@ import ar.api.faltauno.modelo.Partido;
 
 public interface PartidoDao {
 
-	Partido crearPartido(Partido match);
+	Partido crearPartido(Partido partido);
 
-	void delete(int matchId);
+	void delete(int partido);
 
-	Partido findById(int matchId);
+	Partido findById(int partidoId);
 
 	List<Partido> getPartidos();
+	
+	Partido updatePartido(Partido partido);
+
 
 }
