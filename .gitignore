@@ -15,6 +15,12 @@ local.properties
 .loadpath
 .recommenders
 
+# m2e-code-quality Eclipse IDE plugin temporary configuration files for Eclipse CS Checkstyle / PMD / FindBugs Plug-Ins
+.checkstyle
+.pmd
+.pmdruleset.xml
+.fbExcludeFilterFile
+
 # External tool builders
 .externalToolBuilders/
 
