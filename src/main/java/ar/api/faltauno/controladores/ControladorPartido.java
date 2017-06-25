@@ -54,6 +54,27 @@ public class ControladorPartido {
  
     }
     
+    @RequestMapping(value = "/matches/male", method = RequestMethod.GET)
+    public List<Partido> getPartidosMasculino() {
+        List<Partido> partidos = servicioPartido.getPartidosMasculino();
+        return partidos;
+ 
+    }
+    
+    @RequestMapping(value = "/matches/female", method = RequestMethod.GET)
+    public List<Partido> getPartidosFemenino() {
+        List<Partido> partidos = servicioPartido.getPartidosFemenino();
+        return partidos;
+ 
+    }
+    
+    @RequestMapping(value = "/matches/mix", method = RequestMethod.GET)
+    public List<Partido> getPartidosMixto() {
+        List<Partido> partidos = servicioPartido.getPartidosMixto();
+        return partidos;
+ 
+    }
+    
     
     @RequestMapping(value = "/matches/update", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Void> updatePartido(@RequestBody Partido partido, UriComponentsBuilder ucBuilder) {

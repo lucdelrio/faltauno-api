@@ -16,5 +16,11 @@ public interface PartidoDao {
 	
 	Partido updatePartido(Partido partido);
 
+	List<Partido> getPartidosMasculino();
+
+	List<Partido> getPartidosFemenino();
+
+	List<Partido> getPartidosMixto();
+
 
 }

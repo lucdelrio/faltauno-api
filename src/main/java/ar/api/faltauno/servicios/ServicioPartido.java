@@ -20,4 +20,10 @@ public interface ServicioPartido {
 
 	void updatePartido(Partido partido);
 
+	List<Partido> getPartidosMasculino();
+
+	List<Partido> getPartidosFemenino();
+
+	List<Partido> getPartidosMixto();
+
 }

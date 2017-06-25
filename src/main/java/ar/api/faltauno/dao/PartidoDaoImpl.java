@@ -60,5 +60,32 @@ public class PartidoDaoImpl implements PartidoDao {
 		return partido;
 		
 	}
+	
+	@Override
+	public List<Partido> getPartidosMasculino() {
+		final Session session = sessionFactory.getCurrentSession();
+
+		Query query = session.createQuery("FROM Partido p WHERE p.genero = 'Masculino' ORDER BY p.cupo ASC");
+		   
+		return  query.list();
+	}
+
+	@Override
+	public List<Partido> getPartidosFemenino() {
+		final Session session = sessionFactory.getCurrentSession();
+
+		Query query = session.createQuery("FROM Partido p WHERE p.genero = 'Femenino' ORDER BY p.cupo ASC");
+		   
+		return  query.list();
+	}
+
+	@Override
+	public List<Partido> getPartidosMixto() {
+		final Session session = sessionFactory.getCurrentSession();
+
+		Query query = session.createQuery("FROM Partido p WHERE p.genero = 'Mixto' ORDER BY p.cupo ASC");
+		   
+		return  query.list();
+	}
 
 }

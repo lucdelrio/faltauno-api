@@ -50,5 +50,20 @@ public class ServicioPartidoImpl implements ServicioPartido{
 	public boolean isMatchExist(Partido partido) {
         return false;
 	}
+
+	@Override
+	public List<Partido> getPartidosMasculino() {
+		return this.partidoDao.getPartidosMasculino();
+	}
+
+	@Override
+	public List<Partido> getPartidosFemenino() {
+		return this.partidoDao.getPartidosFemenino();
+	}
+
+	@Override
+	public List<Partido> getPartidosMixto() {
+		return this.partidoDao.getPartidosMixto();
+	}
  
 }
